@@ -1,0 +1,86 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+button img{
+  height: 10vh;
+  width: 10vh;
+  border-radius: 60%;
+}
+
+.container{
+
+   display: flex;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+}
+
+
+button{
+  /* background-color: tomato; */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 100vh;
+  border: none;
+  position: relative;
+  z-index: 3;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+button::before{
+  position: absolute;
+  content: "";
+  z-index: -1;
+  transform:scaleX(0);
+  height:33%;
+  width: inherit;
+  /* max-width: inherit; */
+  /* transform-origin: top; */
+  transform-origin: center;
+  background-color: green;
+  /* top: 0; */
+  /* height: 10%; */
+  bottom:0;
+  left: 0;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+
+}
+
+button:hover::before{
+  transform: scaleX(1);
+}
+
+button::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 33%;
+  width: 100%;
+  /* max-width: 100%; */
+  background-color: orangered;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  z-index: -1;
+}
+
+button:hover::after{
+  transform: scaleX(1);
+}
+button:hover{
+  background-color: white;
+  color: blue;
+}
