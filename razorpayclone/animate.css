@@ -1,0 +1,44 @@
+.image{
+    animation-name: roll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    /* animation-direction: reverse; */
+    animation-iteration-count: infinite;
+}
+
+@keyframes roll {
+    0%{
+        transform: translateY(0px);
+    }
+    
+    100%{
+        transform: translateY(-850px);
+    }
+    /* 100%{
+        transform: translateY(0px);
+    } */
+}
+.over{
+    background:  linear-gradient(270deg,#f4f8ff,rgba(223, 213, 213, 0));
+    filter: brightness(100%) blur(20px) opacity(90%);
+    /* opacity: 0.5; */
+    /* -webkit-backdrop-filter: blur(50px);  */
+    backdrop-filter: blur(40px) opacity(100%);
+    border: none;
+}
+
+
+.clock:hover{
+    background-color: rgb(43 ,132, 234);
+}
+
+.newfeature{
+    box-shadow: 2px 4px 9px 1px hsl(0deg 0% 0% / 5%);
+}
+.feature{
+    
+        background-size: 100% 100%;
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    
+}

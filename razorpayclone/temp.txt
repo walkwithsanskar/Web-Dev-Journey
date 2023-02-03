@@ -1,0 +1,21 @@
+<!-- <section class="bg-[#f5f8fe] relative pt-40 pb-12  mt-[200px] flex flex-row justify-center "> -->
+        <!-- <div class="flex flex-row justify-center w-11/12 max-w-[1080px]"> -->
+            <!-- left part -->
+            <!-- <div class="flex flex-col gap-1 max-w-[calc(100%-500px)] justify-start"> -->
+                <!-- <h2 class="font-sans-serif   font-bold text-deepBlueHead text-2xl">Join the 50,00,000+ businesses using Razorpay</h2> -->
+                <!-- <div class="w-6 h-1 bg-greenLight  mb-10 my-[1px] self-start mt-2"></div> -->
+                <!-- <p class="font-mullish mt-6">We make it easier for you to focus on building greoat products while we work on simplifying your payments. Become one of us by joining thousands of our happy users and simplify the online payment experience for your customers.</p> -->
+                <!-- <p>Focus on your business while we handle the complexities of payments for you.</p> -->
+            <!-- </div> -->
+
+            <!-- rightpart -->
+            <!-- <div class="h-[500px] w-[500px] overflow-y-hidden relative bg-[#f5f8fe]"> -->
+                <!-- <div class="over w-[500px] h-[150px] z-50 absolute top-0  opacity-50" ></div> -->
+                <!-- <img src="./images/comanies.png " alt="" class=" image absolute top-0"> -->
+                <!-- <div class="over w-[500px] h-[150px]  absolute bottom-0 z-50  opacity-50 border-t-[-10px] border-b-lime-50" ></div> -->
+                <!-- <div class="over w-[500px] h-[100px] z-50 absolute top-0  bg-[#f5f8fe] blur-[100px] opacity-100" ></div>
+                <img src="./images/comanies.png " alt="" class=" image absolute top-0">
+                <div class="over w-[500px] h-[100px]  absolute bottom-0 z-50 bg-[#f5f8fe] blur-[100px] opacity-100 border-t-[-10px] border-b-lime-50" ></div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </section> -->
