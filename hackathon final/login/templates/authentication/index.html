@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') ;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            /*background-color: rgb(44, 41, 41);*/
+            
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: rgba(223, 223, 213,0.1);
+            
+        }
+        .container h3{
+            font-size: 50px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: Black;
+            opacity: 0.8;
+        }
+        .btn {
+            height: 50px;
+            transition-property:all ;
+            transition-duration: 200ms;
+            background: transparent;
+        }
+        .btn a{
+            text-decoration: none;
+            color: black;
+            opacity: 0.5;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 900;
+            transition-property: all;
+            transition-duration: 200ms;
+        }
+        .btn:hover a{
+            opacity: 1;
+            color: black;
+        }
+        .btn:hover{
+            border-radius: 20px;
+            scale: 0.95;
+            
+            background-color: rgb(32, 178, 170,0.8);
+
+
+        }
+    </style>
+</head>
+<body >
+    <!-- <img src="img1.jpg" alt=""> -->
+    <div class="container">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message:</strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+        </div>
+        {% endfor %}
+
+        <h3>Welcome To Sponsi</h3>
+        
+
+        {% if user.is_authenticated %}
+        <h3>Hello {{fname}}!</h3>
+        <h4>You're successfully logged in.</h4>
+        <button  class="btn"><a href="/site">Go To Dashboard</a></button>
+        <button class="btn" type="submit"><a href="/signout">SignOut</a></button>
+        
+        {% else %}
+        <button class="btn" type="submit"><a href="/signup">SignUp</a></button>
+        <br/>
+        <br/>
+        <button class="btn" type="submit"><a href="/signin">SignIn</a></button>
+        {% endif %}
+    
+    </div>
+</body>
+</html>

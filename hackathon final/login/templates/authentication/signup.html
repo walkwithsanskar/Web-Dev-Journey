@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://images.pexels.com/photos/175045/pexels-photo-175045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow-y: auto;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            border: 3px solid white;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom:10px ;
+            background: linear-gradient(to right,rgba(206, 221, 231,0.1),rgba(203, 211, 219,0.1));
+        }
+        form label{
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        form input{
+            width: 400px;
+            height: 30px;
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        form button{
+            height: 40px;
+            width: 400px;
+            background: transparent;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <form action="/signup" method="post">
+        <h1 style="align-self: center;">Sign Up</h1>
+    {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="enter user" required><br>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="fname" placeholder="enter first name" required><br>
+        <label for="lname">last Name </label>
+        <input type="text" id="lname" name="lname" placeholder="enter last name" required><br>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="enter email" required><br>
+        <label for="pass1">Password</label>
+        <input type="password" id="pass1" name="pass1" placeholder="enter password" required><br>
+        <label for="pass2">Confirm Password </label>
+        <input type="password" id="pass2" name="pass2" placeholder="confirm password" required><br>
+        <button type="submit"> Sign Up</button>
+    </form>
+</body>
+</html>

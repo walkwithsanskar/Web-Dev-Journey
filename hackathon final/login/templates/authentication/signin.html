@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://images.pexels.com/photos/4473400/pexels-photo-4473400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: 100% 100%;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+           
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom:10px ;
+            background: linear-gradient(to right,rgba(206, 221, 231,0.8),rgba(203, 211, 219,0.1));
+            
+        }
+      
+        form label{
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        form input{
+            width: 400px;
+            height: 30px;
+            font-size: 15px;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background: black;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        form button{
+            height: 40px;
+            width: 400px;
+            background: white;
+            border: 1px solid black;
+        }
+        .btn {
+            height: 40px;
+            transition-property:all ;
+            transition-duration: 200ms;
+            background: transparent;
+            text-decoration: none;
+            color: black;
+            opacity: 1;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 900;
+            transition-property: all;
+            transition-duration: 200ms;
+        }
+       
+      
+        .btn:hover{
+            
+            scale: 0.95;
+            opacity: 1;
+            color: white;
+            background-color:black ;
+
+
+        }
+    </style>
+</head>
+<body>
+    <form action="/signin" method="post">
+        {% csrf_token %}
+            <label for="">Username</label>
+            <input type="text" id="username" name="username" placeholder="enter user" required><br>
+            <label for="pass1">Password</label>
+            <input type="password" id="pass1" name="pass1" placeholder="enter password" required><br>
+            
+            <button type="submit" class="btn"> Sign in</button>
+            
+            
+        </form>
+</body>
+</html>
